@@ -2,7 +2,7 @@
 // CASTILLO CACCIRE KEMELY
 
 /*1)Crear un generador de arreglos 10/1mil/100 mil/ 1 millon
-  2)Medir tiempo (segun su lengiaje de programacion)*/
+  2)Medir tiempo (segun su lenguaje de programacion)*/
   
 #include<iostream>
 #include<ctime> // libreria para el tiempo en milisegundos y numeros random
@@ -39,7 +39,7 @@ int main(){
 	
 	int tamano,t1,t2,time;
 	int* arreglo= NULL; //Se inicializa el puntero
-	cout<< "Ingrese el tamaño del arreglo: ";cin>>tamano;
+	cout<< "Ingrese el tamaÃ±o del arreglo: ";cin>>tamano;
 	arreglo= new int[tamano]; 
 	t1 =clock();
 	rellenar_arreglo(arreglo,tamano);
@@ -118,8 +118,8 @@ int main()
 	int arr2[] = {4,3,2,1};
 	int n = sizeof(arr1) / sizeof(arr1[0]); 
 	cout<<"-----------------------METODO BURBUJA-----------------------"<<endl;
-    bubbleSort(arr1, n); 
-    cout<<"-----------------------METODO INSERCION---------------------"<<endl;
+        bubbleSort(arr1, n); 
+        cout<<"-----------------------METODO INSERCION---------------------"<<endl;
 	insertionSort(arr2, n); 
 	cout<<"                                      "<<endl;
 	cout<<"El vector ordenado ascendentemente es:"<<endl;
