@@ -122,7 +122,7 @@ int main()
         cout<<"-----------------------METODO INSERCION---------------------"<<endl;
 	insertionSort(arr2, n); 
 	cout<<"                                      "<<endl;
-	cout<<"El vector ordenado ascendentemente es:"<<endl;
+	cout<<"El arreglo ordenado ascendentemente es:"<<endl;
 	printArray(arr1, n); 
 
 	return 0; 
