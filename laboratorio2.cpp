@@ -1,4 +1,18 @@
 
+/* 
+
+LABORATORIO 2
+NOMBRE:Castillo Caccire Kemely
+CODIGOS: https://www.geeksforgeeks.org/insertion-sort
+               https://www.geeksforgeeks.org/bubble-sort
+
+Hacer la comparación para inserción y burbuja de forma gráfica (tiempo real y tiempo retornado por sus análisis)
+Utilizar cualquier herramientas de graficación de datos.
+Probar elementos ordenados (creciente y decreciente) y de forma aleatoria para elementos:
+Tamaño 500, 1000, 2000, 5000, 10000.
+*/
+
+
 #include<iostream>
 #include<ctime> // libreria para el tiempo en milisegundos y numeros random
 #include <algorithm> 
@@ -6,8 +20,9 @@ using namespace std;
 
 
 /* Cuando genero los numeros aleatorios tomo
-como parametros del  al tama�o del 
-arreglo se puede modificar los parametros */
+como parametros del  al tamaño del 
+arreglo se puede modificar los parametros
+y hay repetidos*/
 
 void rellenar_arreglo(int *A,int tam){
 	int i,dato;
@@ -98,19 +113,19 @@ int main()
     
     int* arr1= NULL; //Se inicializan los puntero
     int* arr2= NULL;
-	cout<< "Ingrese el tama�o del arreglo: ";cin>>tamano;
-	arr1= new int[tamano]; 
-	arr2= new int[tamano]; 
-	rellenar_arreglo(arr1,tamano);
-	rellenar_arreglo(arr2,tamano);
-	/*cout<<"----------ARREGLOs ORIGINALES------------"<<endl;
-	mostrar(arr1,tamano);
-	mostrar(arr2,tamano);*/
+    cout<< "Ingrese el tamaño del arreglo: ";cin>>tamano;
+    arr1= new int[tamano]; 
+    arr2= new int[tamano]; 
+    rellenar_arreglo(arr1,tamano);
+    rellenar_arreglo(arr2,tamano);
+    /*cout<<"----------ARREGLOs ORIGINALES------------"<<endl;
+    mostrar(arr1,tamano);
+    mostrar(arr2,tamano);*/
 	
-	//ORDENAMOS CON LOS ALGORITMOS DE BURBUJA E INSERCION y TIEMPO
+    //ORDENAMOS CON LOS ALGORITMOS DE BURBUJA E INSERCION y TIEMPO
 	
-	cout<<"-----------------------METODO BURBUJA-----------------------"<<endl;
-	t1 =clock();
+    cout<<"-----------------------METODO BURBUJA-----------------------"<<endl;
+    t1 =clock();
     bubbleSort(arr1, tamano); 
     t2=clock();
     time1=getMilisegundos(t2-t1);
@@ -118,25 +133,21 @@ int main()
     
     cout<<"-----------------------METODO INSERCION---------------------"<<endl;
     t3 =clock();
-	insertionSort(arr2, tamano); 
-	t4=clock();
-	time2=getMilisegundos(t4-t3);
-	cout<<"Tiempo de ejecucion insercion: "<<time2<<" Milisegundos"<<endl;
-	cout<<"                                      "<<endl;
+    insertionSort(arr2, tamano); 
+    t4=clock();
+    time2=getMilisegundos(t4-t3);
+    cout<<"Tiempo de ejecucion insercion: "<<time2<<" Milisegundos"<<endl;
+    cout<<"                                      "<<endl;
 	
-	
-	//MOSTRAR EL ARREGLO ORDENADO (OPCIONAL)
-	cout<<"El vector ordenado ascendentemente es:"<<endl;
-	//mostrar(arr1, tamano); 	
-	//mostrar(arr2, tamano); 
-	
-	
+    //MOSTRAR EL ARREGLO ORDENADO (OPCIONAL)
+    cout<<"El vector ordenado ascendentemente es:"<<endl;
+    //mostrar(arr1, tamano); 	 
+    //mostrar(arr2, tamano); 
 
-	
-	delete [] arr1;
-	delete [] arr2;
+    delete [] arr1;
+    delete [] arr2;
 
-	return 0; 
+    return 0; 
 } 
 
 
