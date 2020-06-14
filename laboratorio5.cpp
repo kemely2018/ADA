@@ -106,33 +106,33 @@ int main()
 		tamano=i;
 		arr1= new int[tamano];
 		arr2= new int[tamano]; 
-	    rellenar_arreglo(arr1,tamano);
-	    rellenar_arreglo(arr2,tamano);
+	        rellenar_arreglo(arr1,tamano);
+	        rellenar_arreglo(arr2,tamano);
 	    
-	    //ORDENAMOS CON LOS ALGORITMOS DE MERGE SORT E INSERCION y TIEMPO
+	   //ORDENAMOS CON LOS ALGORITMOS DE MERGE SORT E INSERCION y TIEMPO
 	    	    
-	    //cout<<"-----------------------MERGE SORT---------------------"<<endl;
-        QueryPerformanceCounter(&t_ini);
-        mergeSort(arr1, 0, tamano - 1); 
-	    QueryPerformanceCounter(&t_fin);
-        secs = performancecounter_diff(&t_fin, &t_ini);
-        tmerge =secs*1000;
+	   //cout<<"-----------------------MERGE SORT---------------------"<<endl;
+           QueryPerformanceCounter(&t_ini);
+           mergeSort(arr1, 0, tamano - 1); 
+	   QueryPerformanceCounter(&t_fin);
+           secs = performancecounter_diff(&t_fin, &t_ini);
+           tmerge =secs*1000;
 
-	    //cout<<"-----------------------QUICK SORT---------------------"<<endl;
-        QueryPerformanceCounter(&t_ini1);
-	    quickSort(arr2, tamano); 
-	    QueryPerformanceCounter(&t_fin1);
-	    secs1 = performancecounter_diff(&t_fin1, &t_ini1);
-	    tquick=secs1*1000;
+	   //cout<<"-----------------------QUICK SORT---------------------"<<endl;
+           QueryPerformanceCounter(&t_ini1);
+	   quickSort(arr2, tamano); 
+	   QueryPerformanceCounter(&t_fin1);
+           secs1 = performancecounter_diff(&t_fin1, &t_ini1);
+           tquick=secs1*1000;
 	    
-	    gotoxy(2,0);
-	    cout<<"N      "<<"  QUICKSORT "<<"   MERGE SORT"<<endl;
-	    gotoxy(x,y);
-	    cout<<tamano<<"     "<<tquick<<"     "<<tmerge<<endl;
-	    x+=2;y+=2;x=2;
-	    cout<<"                                      "<<endl;
-	    delete [] arr1;
-		delete [] arr2;	
+	   gotoxy(2,0);
+	   cout<<"N      "<<"  QUICKSORT "<<"   MERGE SORT"<<endl;
+	   gotoxy(x,y);
+	   cout<<tamano<<"     "<<tquick<<"     "<<tmerge<<endl;
+           x+=2;y+=2;x=2;
+	   cout<<"                                      "<<endl;
+	   delete [] arr1;
+	   delete [] arr2;	
 	}
 	return 0; 
 } 
